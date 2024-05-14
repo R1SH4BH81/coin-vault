@@ -1,313 +1,226 @@
-<html>
-    <head>
-        <meta charset="UTF-8"/>
-        <style>
-            html {
-	 font-size: 62.5%;
-}
- body {
-	 font-size: 1.4rem;
-}
-/* =14px */
- h1 {
-	 font-size: 2.4rem;
-}
-/* =24px */
- .container__item {
-	 margin: 0 auto 40px;
-}
- .landing-page-container {
-	 width: 100%;
-	 min-height: 100%;
-	 height: 90rem;
-	 background-image: url('https://s29.postimg.org/vho8xb2pj/landing_bg.jpg');
-	 background-repeat: no-repeat;
-	 background-size: cover;
-	 background-position: bottom;
-	 overflow: hidden;
-	 font-family: 'Montserrat', sans-serif;
-	 color: #09383e;
-}
- .content__wrapper {
-	 max-width: 1200px;
-	 width: 90%;
-	 height: 100%;
-	 margin: 0 auto;
-	 position: relative;
-}
- .header {
-	 width: 100%;
-	 height: 2rem;
-	 padding: 4.5rem 0;
-	 display: block;
-}
- .menu-icon {
-	 width: 2.5rem;
-	 height: 1.5rem;
-	 display: inline-block;
-	 cursor: pointer;
-}
- .header__item {
-	 display: inline-block;
-	 float: left;
-}
- .menu-icon__line {
-	 width: 1.5rem;
-	 height: 0.2rem;
-	 background-color: #0c383e;
-	 display: block;
-}
- .menu-icon__line:before, .menu-icon__line:after {
-	 content: '';
-	 width: 1.5rem;
-	 height: 0.2rem;
-	 background-color: #0c383e;
-	 display: inline-block;
-	 position: relative;
-}
- .menu-icon__line:before {
-	 left: 0.5rem;
-	 top: -0.6rem;
-}
- .menu-icon__line:after {
-	 top: -1.8rem;
-}
- .heading {
-	 width: 90%;
-	 font-size: 2rem;
-	 font-weight: bold;
-	 margin: 0;
-	 line-height: 1.7rem;
-	 margin: 0 auto;
-	 text-align: center;
-}
- .social-container {
-	 width: 7.25rem;
-	 list-style: none;
-	 overflow: hidden;
-	 padding: 0;
-	 margin: 0;
-	 float: right;
-}
- .social-container .social__icon {
-	 float: left;
-	 cursor: pointer;
-}
- .social-container .social__icon.social__icon--dr {
-	 margin-left: 0.5rem;
-}
- .social-container .social__icon.social__icon--dr img {
-	 height: 2rem;
-}
- .social-container .social__icon.social__icon--in {
-	 margin-left: 0.75rem;
-}
- .social-container .social__icon.social__icon--in img {
-	 height: 2rem;
-}
- .social-container .social__icon.social__icon--fb img {
-	 height: 2rem;
-	 margin: 0rem;
-}
- .coords {
-	 font-size: 0.5rem;
-	 display: inline-block;
-	 transform: rotate(-90deg) translateY(50%);
-	 float: left;
-	 position: relative;
-	 top: 40%;
-	 letter-spacing: 0.2rem;
-	 left: -11.5rem;
-	 margin: 0;
-}
- .ellipses-container {
-	 width: 50rem;
-	 height: 50rem;
-	 border-radius: 50%;
-	 margin: 0 auto;
-	 position: relative;
-	 top: 10.5rem;
-}
- .ellipses-container .greeting {
-	 position: absolute;
-	 top: 11.6rem;
-	 left: 13rem;
-	 right: 0;
-	 margin: 0 auto;
-	 text-transform: uppercase;
-	 letter-spacing: 4rem;
-	 font-size: 2.2rem;
-	 font-weight: 400;
-	 opacity: 0.5;
-}
- .ellipses-container .greeting:after {
-	 content: '';
-	 width: 0.3rem;
-	 height: 0.3rem;
-	 border-radius: 50%;
-	 display: inline-block;
-	 background-color: #0c383e;
-	 position: relative;
-	 top: -0.65rem;
-	 left: -5.05rem;
-}
- .ellipses {
-	 border-radius: 50%;
-	 position: absolute;
-	 top: 0;
-	 border-style: solid;
-}
- .ellipses__outer--thin {
-	 width: 100%;
-	 height: 100%;
-	 border-width: 1px;
-	 border-color: rgba(9, 56, 62, 0.1);
-	 animation: ellipsesOrbit 15s ease-in-out infinite;
-}
- .ellipses__outer--thin:after {
-	 content: "";
-	 background-image: url('https://s29.postimg.org/5h0r4ftkn/ellipses_dial.png');
-	 background-repeat: no-repeat;
-	 background-position: center;
-	 top: 0;
-	 left: 0;
-	 bottom: 0;
-	 right: 0;
-	 position: absolute;
-	 opacity: 0.15;
-}
- .ellipses__outer--thick {
-	 width: 99.5%;
-	 height: 99.5%;
-	 border-color: #09383e transparent;
-	 border-width: 2px;
-	 transform: rotate(-45deg);
-	 animation: ellipsesRotate 15s ease-in-out infinite;
-}
- .ellipses__orbit {
-	 width: 2.5rem;
-	 height: 2.5rem;
-	 border-width: 2px;
-	 border-color: #09383e;
-	 top: 5rem;
-	 right: 6.75rem;
-}
- .ellipses__orbit:before {
-	 content: '';
-	 width: 0.7rem;
-	 height: 0.7rem;
-	 border-radius: 50%;
-	 display: inline-block;
-	 background-color: #09383e;
-	 margin: 0 auto;
-	 left: 0;
-	 right: 0;
-	 position: absolute;
-	 top: 50%;
-	 transform: translateY(-50%);
-}
- .scroller {
-	 width: 7.5rem;
-	 display: inline-block;
-	 float: right;
-	 position: relative;
-	 top: -15%;
-	 transform: translateY(50%);
-	 overflow: hidden;
-}
- .scroller .page-title {
-	 font-family: 'Playfair Display', serif;
-	 letter-spacing: 0.5rem;
-	 display: inline-block;
-	 float: left;
-	 margin-top: 1rem;
-}
- .scroller .timeline {
-	 width: 1.5rem;
-	 height: 9rem;
-	 display: inline-block;
-	 float: right;
-}
- .scroller .timeline .timeline__unit {
-	 width: 100%;
-	 height: 0.1rem;
-	 display: block;
-	 background-color: #0c383e;
-	 margin: 0 0 2rem;
-	 opacity: 0.2;
-}
- .scroller .timeline .timeline__unit.timeline__unit--active {
-	 opacity: 1;
-}
- .scroller .timeline .timeline__unit.timeline__unit--active:after {
-	 opacity: 0.2;
-}
- .scroller .timeline .timeline__unit:after {
-	 content: '';
-	 width: 70%;
-	 height: 0.1rem;
-	 display: block;
-	 position: relative;
-	 float: right;
-	 background-color: #0c383e;
-	 top: 1rem;
-}
- @keyframes ellipsesRotate {
-	 0% {
-		 transform: rotate(-45deg);
-	}
-	 100% {
-		 transform: rotate(-405deg);
-	}
-}
- @keyframes ellipsesOrbit {
-	 0% {
-		 transform: rotate(0);
-	}
-	 100% {
-		 transform: rotate(360deg);
-	}
-}
- 
-        </style>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Vault</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
-    <body>
-        <div class="container">
-            <div class="container__item landing-page-container">
-                <div class="content__wrapper">
+:root {
+  --font-p: 'Montserrat', sans-serif;
+  --font-title: 'Lobster';
+  --text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+  --box-shadow: 0px 0px 30px 12px rgba(0, 0, 0, 0.1);
+}
 
-                  
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
-                    <p class="coords">N 49° 16' 35.173"  /  W 0° 42' 11.30"</p>
+.bg-wrapper {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 
-                    <div class="ellipses-container">
+.bg-wrapper .bg {
+  height: 109%;
+  width: 106%;
+  background: url('https://wallpapercave.com/wp/v2cbD6Q.jpg') no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  z-index: -99;
+  filter: blur(25px); 
+  
+}
 
-                        <h2 class="greeting">Hello</h2>
+.top-content {
+  display: flex;
+  width: 100%;
+}
 
-                        <div class="ellipses ellipses__outer--thin">
+.top-content h1 {
+  flex-grow: 1;
+  margin: 50px 70px;
+  display: flex;
+  color: white;
+  font-size: 50px;
+  font-family: var(--font-title);
+}
 
-                            <div class="ellipses ellipses__orbit"></div>
+.top-content h1:last-child {
+  align-items: center;
+  justify-content: flex-end;
+}
 
-                        </div>
+@media (max-width: 575.98px) {
+  .top-content h1 {
+    margin: 50px 30px;
+  }
+}
 
-                        <div class="ellipses ellipses__outer--thick"></div>
-                    </div>
+.menu {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 8px;
+  transition: all 0.15s linear;
+  border: 1px solid white;
+  box-shadow: var(--box-shadow);
+}
 
-                    <div class="scroller">
-                        <p class="page-title"><a href="home.html">hi</a></p>
+.menu:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
 
-                        <div class="timeline">
-                            <span class="timeline__unit"></span>
-                            <span class="timeline__unit timeline__unit--active"></span>
-                            <span class="timeline__unit"></span>
-                        </div>
-                    </div>
-                </div>
+.bottom-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 70px;
+  margin-top: auto;
+  width: 100%;
+}
 
-            </div>
+@media (max-width: 575.98px) {
+  .bottom-content {
+    padding: 50px 30px;
+  }
+}
 
-        </div>
+.bottom-content p {
+  color: white;
+  font-family: var(--font-p);
+  line-height: 27px;
+  font-size: 17px;
+  margin: 7px 0px 23px 0px;
+  text-shadow: var(--text-shadow);
+}
 
-    </body>
+@media (max-width: 575.98px) {
+  .bottom-content p {
+    font-size: 14px;
+  }
+}
+
+.content-left {
+  flex-grow: 1;
+  text-align: center;
+  max-width: 750px;
+}
+
+.content-left .title {
+  font-family: var(--font-title);
+  color: #fff;
+  font-size: 160px;
+  text-shadow: var(--text-shadow);
+}
+
+@media (max-width: 575.98px) {
+  .content-left .title {
+    font-size: 80px;
+  }
+}
+
+.content-right {
+  flex-grow: 1;
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@media (max-width: 991.98px) {
+  .content-right {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.content-right p {
+  margin: 20px 0;
+  line-height: 30px;
+}
+
+button,
+button:visited,
+button:focus {
+  cursor: pointer;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.1);
+  width: 160px;
+  padding: 15px 0px;
+  color: white;
+  font-family: var(--font-p);
+  font-size: 18px;
+  box-shadow: var(--box-shadow);
+  transition: all 0.2s linear;
+  outline: none;
+  border-radius: 50px;
+}
+
+button:hover {
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.5);
+}
+.index{
+    height: 50px;
+    width: 50px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="bg-wrapper">
+        <!-- content top -->
+        <section class="top-content">
+          <h1>
+            <img src="img/home.png" class="index" title="Go To Homepage">
+          </h1>
+        </section>
+        
+        <!-- content bottom -->
+        <section class="bottom-content">
+          <div class="content-left">
+            <h1 class="title">Coin Vault</h1>
+            <p>Description</p>
+            
+          </div>
+          
+          <div class="content-right">
+            <button onclick="window.location.href='login.html'">Get started </button>
+          </div>
+        </section>
+        
+        <!-- parallax background -->
+        <div class="bg"></div>
+      </div>
+<script>
+    $('.bg-wrapper').on('mousemove', function(e) {
+  mouseX = e.pageX, mouseY = e.pageY, moveFactor = 50, windowWidth = $(this).width(), windowHeight = $(this).height();
+  percentX = ((mouseX / windowWidth) * moveFactor - moveFactor / 2);
+  percentY = ((mouseY / windowHeight) * moveFactor - moveFactor / 2);
+  leftString = percentX + "px";
+  topString = percentY + "px";
+  if (percentX < (windowWidth / 2)) {
+    leftString = -percentX + "px";
+  }
+
+  if (percentY < (windowHeight / 2)) {
+    topString = -percentY + "px";
+  }
+
+  bgPos = leftString + " " + topString;
+  $(this).find('.bg').attr("style", "background-position: " + bgPos);
+
+});
+</script>      
+</body>
 </html>
