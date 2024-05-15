@@ -177,7 +177,9 @@ input[id="radio-4"]:checked ~ .glider {
 </head>
 <body>
     <img src="img/logo.png" class="logo">
+    
     <div class="content">
+        
         <h4>Balance</h4>
         <h2>{balance}<sup class="profit">{profit}</sup></h2>
         <div class="button-container">
@@ -185,30 +187,79 @@ input[id="radio-4"]:checked ~ .glider {
             <button class="button2">Transfer</button>
         </div>
         <div class="market">
-            <div class="coin">
-                <img src="img/bitcoin.png" alt="Bitcoin" class="coin" id="bitcoin-img">
-                <p id="bitcoin-name"  style="font-size: 13px;">cant Fetch</p>
-                
-                <p id="bitcoin-value"></p>
-            </div>
-            <div class="coin">
-                <img src="img/eth.png" alt="Ethereum" class="coin" id="ethereum-img">
-                <p id="ethereum-name" style="font-size: 13px";>cant Fetch</p>
-                
-                <p id="ethereum-value"></p>
-            </div>
-            <div class="coin">
-                <img src="img/ethcl.png" alt="Ethereum Classic" class="coin" id="ethereum-classic-img">
-                <p id="ethereum-classic-name" style="font-size: 13px";>cant Fetch</p>
-                
-                <p id="ethereum-classic-value"></p>
-            </div>
-            <div class="coin">
-                <img src="img/doge.png" alt="Dogecoin" class="coin" id="dogecoin-img">
-                <p id="dogecoin-name" style="font-size: 13px">cant Fetch</p>
-                
-                <p id="dogecoin-value"></p>
-            </div>
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "COINBASE:BTCUSD",
+                "width": "100%",
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "BINANCE:ETCUSD",
+                "width": "100%",
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "BINANCE:ETHUSD",
+                "width": "100%",
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "BINANCE:IOTAUSD",
+                "width": "100%",
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "BINANCE:MATICUSD",
+                "width": "100%",
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "BINANCE:DOGEUSD",
+                "width": "100%",
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              
             
         </div>
         
@@ -222,11 +273,11 @@ input[id="radio-4"]:checked ~ .glider {
             <input type="radio" id="radio-1" name="tabs" checked />
             <label class="tab" for="radio-1"><img src="img/navhome.png" class="menus"><span class="notification">2</span></label>
             <input type="radio" id="radio-2" name="tabs" />
-            <label class="tab" for="radio-2"><img src="img/chart.png" class="menus"></label>
+            <label class="tab" for="radio-2" onclick="window.location.href='stock.html'"><img src="img/chart.png" class="menus"></label>
             <input type="radio" id="radio-3" name="tabs" />
-            <label class="tab" for="radio-3"><img src="img/wallet.png" class="menus"></label>
+            <label class="tab" for="radio-3" onclick="window.location.href='wallet.html'"><img src="img/wallet.png" class="menus"></label>
             <input type="radio" id="radio-4" name="tabs" /> <!-- New radio button for the "User" tab -->
-            <label class="tab" for="radio-4"><img src="img/navuser.png" class="menus"></label> <!-- New label for the "User" tab -->
+            <label class="tab" for="radio-4" onclick="window.location.href='user.html'"><img src="img/navuser.png" class="menus"></label> <!-- New label for the "User" tab -->
             <span class="glider"></span>
         </div>
         
