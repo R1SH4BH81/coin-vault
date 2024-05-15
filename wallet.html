@@ -152,6 +152,11 @@
 input[id="radio-4"]:checked ~ .glider {
 	 transform: translateX(300%);
 }
+.credit{
+    height: 200px;
+    width: 400px;
+}
+
  .glider {
 	 position: absolute;
 	 display: flex;
@@ -161,6 +166,38 @@ input[id="radio-4"]:checked ~ .glider {
 	 z-index: 1;
 	 border-radius: 50px;
 	 transition: 0.5s ease-out;
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Adjust as needed */
+}
+
+.button1 {
+    padding: 10px 20px;
+    margin: 0 5px; /* Adjust spacing between buttons */
+    background-color: #ff8c00; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button2 {
+    padding: 10px 20px;
+    margin: 0 5px; /* Adjust spacing between buttons */
+    background-color: #2ecc71; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button2:hover {
+    background-color: #19e86f;
+}
+.button1:hover {
+    background-color: #fa900d;
 }
  @media (max-width: 900px) {
 	 .tabs {
@@ -178,6 +215,38 @@ input[id="radio-4"]:checked ~ .glider {
 <body>
     <img src="img/logo.png" class="logo">
     <div class="content">
+            <img src="img/credit.png" class="credit">
+            <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;margin-left: 25px;margin-bottom: -2px;">current balance</h5>
+            <div style="font-size:35px;margin-left: 25px;margin-bottom: 10px;">$4563.19</div>
+            <div class="button-container" style="margin-bottom: 10px;">
+                <button class="button1">Deposit</button>
+                <button class="button2">Transfer</button>
+            </div>
+            <div style="font-size:15px;margin-left: 25px;margin-bottom: 10px;">Transactions</div>
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "BINANCE:ETHUSD",
+                "width": "100%",
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "locale": "en"
+              }
+                </script>
+              </div>
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                "symbol": "BINANCE:IOTAUSD",
+                "width": "100%",
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "locale": "en"
+              }
+                </script>
+              </div>
             
 
         
