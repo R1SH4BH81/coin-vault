@@ -58,10 +58,7 @@
 	 display: none;
 }
  
-.button-container {
-    display: flex;
-    justify-content: center; /* Adjust as needed */
-}
+
 
 .button1 {
     padding: 10px 20px;
@@ -170,7 +167,7 @@ form {
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 500px;
-    margin-top: 100px;
+    margin-top: -10px;
     
     color : white;
   }
@@ -187,11 +184,12 @@ form {
   }
 
   select, input[type="submit"] {
-    width: 45%;
+    width: 400px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 25px;
     box-sizing: border-box;
+    
   }
 
   input[type="submit"] {
@@ -211,7 +209,7 @@ form {
     color: white;
     border: none;
     cursor: pointer;
-    width: 48%;
+    width: 150px;
     height: 35px;
     margin-left: 10px;
     border-radius: 25px;
@@ -273,27 +271,31 @@ form {
       <form action="#">
         <h2 style="color: white;text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Deposits</h2>
         <label for="crypto">Select crypto</label>
+        <div>
         <select id="crypto" name="crypto">
           <option value="BTC">Bitcoin (BTC)</option>
           <option value="ETH">Ethereum (ETH)</option>
           <option value="DOGE">Dogecoin (DOGE)</option>
           <!-- Add more options for other cryptocurrencies as needed -->
-        </select>
+        </select></div>
         
         <label for="bank">Select bank</label>
+        <div>
         <select id="bank" name="bank">
           <option value="JPMorgan">JPMorgan Chase & Co.</option>
           <option value="BoA">Bank of America</option>
           <option value="ICBC">Industrial and Commercial Bank of China (ICBC)</option>
           <!-- Add more options for other popular banks as needed -->
-        </select>
+        </select></div>
         
         <div class="button-container">
-            <input type="submit" value="Deposit"><button onclick="window.location.href='transfer.html'" type="button" class="doTransfer-button">Do Transfer</button>
+            <input type="submit" value="Deposit" >
             
         </div>
+        <div><button onclick="window.location.href='transfer.html'" type="button" class="doTransfer-button">Do Transfer</button></div>
+
       </form>
-      <img src="img/deposit.png" height="150px" style="float: right;">
+      <img src="img/deposit.png" height="150px" style="float: right;margin-right: 50px;margin-top: -30px;">
 
     
      
@@ -382,3 +384,5 @@ form {
 </script>
 </body>
 </html>
+
+
