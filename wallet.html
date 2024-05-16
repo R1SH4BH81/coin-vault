@@ -175,7 +175,7 @@ input[id="radio-4"]:checked ~ .glider {
 	 position: absolute;
 	 display: flex;
 	 height: 50px;
-	 width: 120px;
+	 width: 150px;
 	 background-color: var(--secondary-color);
 	 z-index: 1;
 	 border-radius: 50px;
@@ -194,7 +194,7 @@ input[id="radio-4"]:checked ~ .glider {
 	 align-items: center;
 	 justify-content: center;
 	 height: 50px;
-	 width: 120px;
+	 width: 150px;
 	 font-size: 1.25rem;
 	 font-weight: 500;
 	 border-radius: 99px;
@@ -217,7 +217,7 @@ input[id="radio-4"]:checked ~ .glider {
 <body>
     <img src="img/logo.png" class="logo">
     <div class="content">
-            <img src="img/credit.png" class="credit">
+            
             <h5 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;margin-left: 25px;margin-bottom: -2px;">current balance</h5>
             <div style="font-size:35px;margin-left: 25px;margin-bottom: 10px;">$4563.19</div>
             <div class="button-container" style="margin-bottom: 10px;">
@@ -225,7 +225,7 @@ input[id="radio-4"]:checked ~ .glider {
                 <button class="button2">Transfer</button>
             </div>
             <div style="font-size:15px;margin-left: 25px;margin-bottom: 10px;">Transactions</div>
-            <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container" style="margin-bottom: 20px;">
                 <div class="tradingview-widget-container__widget"></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
                 {
@@ -237,7 +237,7 @@ input[id="radio-4"]:checked ~ .glider {
               }
                 </script>
               </div>
-              <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container" style="margin-bottom: 20px;">
                 <div class="tradingview-widget-container__widget"></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
                 {
@@ -249,6 +249,20 @@ input[id="radio-4"]:checked ~ .glider {
               }
                 </script>
               </div>
+              <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" style="margin-bottom: 20px;">
+    <div class="tradingview-widget-container__widget"></div>
+     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+    {
+    "symbol": "COINBASE:ETCUSD",
+    "width": "100%",
+    "colorTheme": "dark",
+    "isTransparent": false,
+    "locale": "en"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
             
 
         
