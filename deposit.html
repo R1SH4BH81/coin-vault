@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+ :root {
+	 --primary-color: #185ee0;
+	 --secondary-color: #e6eef9;
+}
+ *, *:after, *:before {
+	 box-sizing: border-box;
+}
+ body {
+	 font-family: "Inter", sans-serif;
+     background-color: black;
+     
+	 
+}
+.content{
+   color:white;
+}
+ .container {
+	 position: absolute;
+	 left: 0;
+	 bottom: 0;
+	 right: 0;
+     margin-bottom: 10px;
+	
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+     
+}
+
+ .tabs * {
+	 z-index: 2;
+    
+}
+.coin {
+    text-align: center;
+}
+
+.coin img {
+    
+    height: 75px;
+}
+
+.coin p {
+    margin: 10px 0;
+}
+.menus{
+    height: 35px;
+    width: 35px;
+}
+ input[type="radio"] {
+	 display: none;
+}
+ 
+.button-container {
+    display: flex;
+    justify-content: center; /* Adjust as needed */
+}
+
+.button1 {
+    padding: 10px 20px;
+    margin: 0 5px; /* Adjust spacing between buttons */
+    background-color: #ff8c00; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button2 {
+    padding: 10px 20px;
+    margin: 0 5px; /* Adjust spacing between buttons */
+    background-color: #2ecc71; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button2:hover {
+    background-color: #19e86f;
+}
+.button1:hover {
+    background-color: #fa900d;
+}
+.profit{
+    color : green;
+}
+.logo{
+    height: 50px;
+}
+.market {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+
+ .notification {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 2rem;
+	 height: 2rem;
+	 margin-left: 0.75rem;
+	 border-radius: 50%;
+	 background-color: var(--secondary-color);
+	 transition: 0.15s ease-in;
+}
+ input[type="radio"]:checked + label {
+	 color: var(--primary-color);
+}
+ input[type="radio"]:checked + label > .notification {
+	 background-color: var(--primary-color);
+	 color: #fff;
+}
+ input[id="radio-1"]:checked ~ .glider {
+	 transform: translateX(0);
+}
+ input[id="radio-2"]:checked ~ .glider {
+	 transform: translateX(100%);
+}
+ input[id="radio-3"]:checked ~ .glider {
+	 transform: translateX(200%);
+}
+input[id="radio-4"]:checked ~ .glider {
+	 transform: translateX(300%);
+}
+.glider {
+	 position: absolute;
+	 display: flex;
+	 height: 50px;
+	 width: 150px;
+	 background-color: var(--secondary-color);
+	 z-index: 1;
+	 border-radius: 50px;
+	 transition: 0.5s ease-out;
+}
+.tabs {
+	 display: flex;
+	 position: relative;
+	 background-color: var(--secondary-color);
+	 box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.206), 0 3px 2px 0 rgba(24, 94, 224, 0.25);
+	 padding: 0.3rem;
+	 border-radius: 99px;
+}
+.tab {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 height: 50px;
+	 width: 150px;
+	 font-size: 1.25rem;
+	 font-weight: 500;
+	 border-radius: 99px;
+	 cursor: pointer;
+	 transition: color 0.15s ease-in;
+}
+form {
+   
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin-top: 100px;
+    
+    color : white;
+  }
+
+  label, select, input[type="submit"] {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: bold;
+    width: 50%;
+  }
+
+  select, input[type="submit"] {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+ 
+
+  .doTransfer-button{
+    background-color: #d9561e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 48%;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 25px;
+    
+  }
+  
+ @media (max-width: 900px) {
+	 .tabs {
+		 transform: scale(0.7);
+         
+	}
+    .glider{
+       
+
+    }
+}
+ 
+ 
+    </style>
+</head>
+<body>
+
+
+
+    <div class="tradingview-widget-container" style="margin-bottom: 20px;">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+        "symbols" : [
+          {
+            "description": "",
+            "proName": "COINBASE:BTCUSD"
+          },
+          {
+            "description": "",
+            "proName": "COINBASE:ETHUSD"
+          },
+          {
+            "description": "",
+            "proName": "BINANCE:IOTAUSD"
+          },
+          {
+          "description": "Ethereum Classic",
+          "proName": "BINANCE:ETCUSD"
+        },
+        {
+          "description": "Dogecoin",
+          "proName": "BINANCE:DOGEUSD"
+        },
+        
+        ],
+        "colorTheme": "dark",
+        "isTransparent": false,
+        "displayMode": "adaptive",
+        "locale": "en"
+      }
+        </script>
+      </div>
+      <form action="#">
+        <h2 style="color: white;text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Deposits</h2>
+        <label for="crypto">Select crypto</label>
+        <select id="crypto" name="crypto">
+          <option value="BTC">Bitcoin (BTC)</option>
+          <option value="ETH">Ethereum (ETH)</option>
+          <option value="DOGE">Dogecoin (DOGE)</option>
+          <!-- Add more options for other cryptocurrencies as needed -->
+        </select>
+        
+        <label for="bank">Select bank</label>
+        <select id="bank" name="bank">
+          <option value="JPMorgan">JPMorgan Chase & Co.</option>
+          <option value="BoA">Bank of America</option>
+          <option value="ICBC">Industrial and Commercial Bank of China (ICBC)</option>
+          <!-- Add more options for other popular banks as needed -->
+        </select>
+        
+        <div class="button-container">
+            <input type="submit" value="Deposit"><button onclick="window.location.href='transfer.html'" type="button" class="doTransfer-button">Do Transfer</button>
+            
+        </div>
+      </form>
+      <img src="img/deposit.png" height="150px" style="float: right;">
+
+    
+     
+     
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    <div class="container">
+       
+        <div class="tabs">
+            <input type="radio" id="radio-1" name="tabs"  />
+            <label class="tab" for="radio-1" onclick="window.location.href='home.html'"><img src="img/navhome.png" class="menus"><span class="notification">2</span></label>
+            <input type="radio" id="radio-2" name="tabs" checked />
+            <label class="tab" for="radio-2" onclick="window.location.href='stock.html'"><img src="img/chart.png" class="menus"></label>
+            <input type="radio" id="radio-3" name="tabs" />
+            <label class="tab" for="radio-3" onclick="window.location.href='wallet.html'"><img src="img/wallet.png" class="menus"></label>
+            <input type="radio" id="radio-4" name="tabs" /> <!-- New radio button for the "User" tab -->
+            <label class="tab" for="radio-4" onclick="window.location.href='user.html'"><img src="img/navuser.png" class="menus"></label> <!-- New label for the "User" tab -->
+            <span class="glider"></span>
+        </div>
+        
+    </div>
+   
+    <script>
+        // JavaScript to toggle input area visibility
+        document.getElementById('showButton').addEventListener('click', function() {
+          var inputArea = document.getElementById('inputArea');
+          if (inputArea.style.display === 'none') {
+            inputArea.style.display = 'block';
+          } else {
+            inputArea.style.display = 'none';
+          }
+        });
+      </script>   
+<script>
+    // Function to toggle visibility of transfer and deposit forms
+    function toggleForms(showTransfer) {
+        var transferForm = document.getElementById('transferForm');
+        var depositForm = document.getElementById('depositForm');
+
+        if (showTransfer) {
+            transferForm.style.display = 'block';
+            depositForm.style.display = 'none';
+        } else {
+            transferForm.style.display = 'none';
+            depositForm.style.display = 'block';
+        }
+    }
+
+    // Event listener for showing transfer form
+    document.getElementById('showTransferButton').addEventListener('click', function() {
+        toggleForms(true);
+    });
+
+    // Event listener for showing deposit form
+    document.getElementById('showDepositButton').addEventListener('click', function() {
+        toggleForms(false);
+    });
+</script>
+</body>
+</html>
