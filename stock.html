@@ -324,6 +324,23 @@ input[id="radio-4"]:checked ~ .glider {
         
     </div>
    
-    
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var container = document.querySelector('.container');
+        var hammer = new Hammer(container);
+
+        hammer.on('swiperight', function() {
+            // Handle right swipe
+            window.location.href = 'wallet.html';
+        });
+
+        hammer.on('swipeleft', function() {
+            // Handle left swipe
+            window.location.href = 'home.html';
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
 </body>
 </html>
