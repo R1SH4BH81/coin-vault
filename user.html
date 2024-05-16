@@ -296,48 +296,69 @@ input::placeholder {
     const labels = [];
     const data1 = [];
     const data2 = [];
+    const data3 = []; // Data for ETH
+    const data4 = []; // Data for BTC
 
     for (let i = 0; i < 12; i++) {
-      labels.push(` ${i + 1}`);
-      data1.push(Math.random() * 1000 - 500); // Generate random profit/loss values for dataset 1
-      data2.push(Math.random() * 1000 - 500); // Generate random profit/loss values for dataset 2
+        labels.push(` ${i + 1}`);
+        data1.push(Math.random() * 1000 - 500); // Generate random profit/loss values for dataset 1 (ETC)
+        data2.push(Math.random() * 1000 - 500); // Generate random profit/loss values for dataset 2 (DOGE)
+        data3.push(Math.random() * 1000 - 500); // Generate random profit/loss values for dataset 3 (ETH)
+        data4.push(Math.random() * 1000 - 500); // Generate random profit/loss values for dataset 4 (BTC)
     }
 
     // Create the chart
     const ctx = document.getElementById('portfolioChart').getContext('2d');
     const portfolioChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: 'ETC',
-          data: data1,
-          borderColor: 'blue',
-          borderWidth: 2,
-          borderJoinStyle: 'round', // Round edges for dataset 1
-          fill: false
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                    label: 'ETC',
+                    data: data1,
+                    borderColor: 'blue',
+                    borderWidth: 2,
+                    borderJoinStyle: 'round', // Round edges for dataset 1 (ETC)
+                    fill: false
+                },
+                {
+                    label: 'DOGE',
+                    data: data2,
+                    borderColor: 'green', // Set color to green
+                    borderWidth: 2,
+                    borderJoinStyle: 'round', // Round edges for dataset 2 (DOGE)
+                    fill: false
+                },
+                {
+                    label: 'ETH',
+                    data: data3,
+                    borderColor: 'orange', // Set color to orange for ETH
+                    borderWidth: 2,
+                    borderJoinStyle: 'round', // Round edges for dataset 3 (ETH)
+                    fill: false
+                },
+                {
+                    label: 'BTC',
+                    data: data4,
+                    borderColor: 'purple', // Set color to red for BTC
+                    borderWidth: 2,
+                    borderJoinStyle: 'round', // Round edges for dataset 4 (BTC)
+                    fill: false
+                }
+            ]
         },
-        {
-          label: 'DOGE',
-          data: data2,
-          borderColor: 'green', // Set color to green
-          borderWidth: 2,
-          borderJoinStyle: 'round', // Round edges for dataset 2
-          fill: false
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            title: {
-              display: true,
-              text: 'Profit/Loss ($)'
+        options: {
+            scales: {
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Profit/Loss ($)'
+                    }
+                }
             }
-          }
         }
-      }
     });
-  </script>
+</script>
   
 </body>
 </html>
